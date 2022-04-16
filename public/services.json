@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "name": "Brucie",
+        "img": "https://i.ibb.co/Ln1msDc/service1.jpg",
+        "discription": 1,
+        "price": "$7382.25"
+    },
+    {
+        "id": 2,
+        "name": "Antonina",
+        "img": "https://i.ibb.co/tPJCjg4/service2.jpg",
+        "discription": 1,
+        "price": "$3565.18"
+    },
+    {
+        "id": 3,
+        "name": "Flor",
+        "img": "https://i.ibb.co/CVkyJp8/service3.jpg",
+        "discription": 1,
+        "price": "$934.98"
+    },
+    {
+        "id": 4,
+        "name": "Norbie",
+        "img": "https://i.ibb.co/FwN9GFW/service4.jpg",
+        "discription": 1,
+        "price": "$7223.92"
+    },
+    {
+        "id": 5,
+        "name": "Jard",
+        "img": "https://i.ibb.co/2WQjKgH/service5.jpg",
+        "discription": 0,
+        "price": "$843.59"
+    },
+    {
+        "id": 6,
+        "name": "Dilly",
+        "img": "https://i.ibb.co/FbDJRC3/service6.jpg",
+        "discription": 0,
+        "price": "$9345.21"
+    },
+    {
+        "id": 7,
+        "name": "Tammie",
+        "img": "https://i.ibb.co/mbf5Kd5/service7.jpg",
+        "discription": 1,
+        "price": "$665.94"
+    },
+    {
+        "id": 8,
+        "name": "Haily",
+        "img": "https://i.ibb.co/b2SHfQJ/service8.jpg",
+        "discription": 0,
+        "price": "$7564.05"
+    },
+    {
+        "id": 9,
+        "name": "Jeramey",
+        "img": "https://i.ibb.co/9txV23T/service9.jpg",
+        "discription": 1,
+        "price": "$1122.24"
+    }
+]
