@@ -1,0 +1,37 @@
+.service {
+    border-radius: 5px;
+    padding: 10px;
+    padding-bottom: 25px;
+    text-align: center;
+    color: white;
+    background-color: #525252;
+}
+
+.picture {
+    height: 250px;
+    border-radius: 5px;
+
+}
+
+.more-btn {
+    height: 50px;
+    width: 210px;
+    background-color: #ff3131;
+    color: white;
+    font-size: medium;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+}
+
+.service:hover {
+    background-color: #5F719F;
+}
+
+.more-btn:hover {
+    background-color: white;
+    border: 2px solid #ff6262;
+    color: #5F719F;
+    font-size: medium;
+    font-weight: 700;
+}

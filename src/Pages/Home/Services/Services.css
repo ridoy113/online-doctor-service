@@ -1,0 +1,33 @@
+.services-title {
+    text-align: center;
+    color: #525252;
+    font-weight: 700;
+    padding: auto;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    /* padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px; */
+    padding: 50px;
+    background-color: #ffdfdf;
+}
+
+
+
+
+
+@media only screen and (max-width:580px) {
+    .services-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width:581px) and (max-width:1020px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
