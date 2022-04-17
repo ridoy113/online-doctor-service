@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Blogs = () => {
+const Sequre = () => {
     return (
         <div>
-            <h2>This is blogs</h2>
+            <h2>Sequre Page</h2>
         </div>
     );
 };
 
-export default Blogs;
+export default Sequre;

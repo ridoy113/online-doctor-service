@@ -8,6 +8,9 @@ import Footer from './Pages/Shared/Footer/Footer'
 import CheckOut from './Pages/CheckOut/CheckOut';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
+import Blogs from './Pages/About/Blogs/Blogs';
+import Sequre from './Pages/Sequre/Sequre';
+import RequireAuth from './Pages/RequireAuth/RequireAuth';
 
 
 function App() {
@@ -19,8 +22,20 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/service/:checkId' element={<CheckOut></CheckOut>}></Route>
         <Route path='/aboutme' element={<AboutMe></AboutMe>}></Route>
+        <Route path='/checkout' element={<CheckOut></CheckOut>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='blogs' element={<Blogs></Blogs>}></Route>
+
+
+        <Route path='/sequre' element={
+          <RequireAuth>
+            <Sequre></Sequre>
+          </RequireAuth>
+        }></Route>
+
+
+        <Route path='/sequre' element={<Sequre></Sequre>}></Route>
 
 
         <Route path='*' element={<NotFound></NotFound>}></Route>
