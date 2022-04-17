@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import { Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css'
 
@@ -23,7 +22,7 @@ const Login = () => {
 
     return (
         <div className='full-login'>
-            <Form onSubmit={handleSubmit}>
+            <from onSubmit={handleSubmit}>
                 <div >
                     <div className='login-text'>
                         <h2>Please LogIn</h2>
@@ -36,7 +35,7 @@ const Login = () => {
                         <button className='log-btn' type="submit">Submit</button>
                     </div>
                 </div>
-            </Form>
+            </from>
             <p className='new'>New To This Site? <Link to="/register" className='text-danger pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
         </div>
     );

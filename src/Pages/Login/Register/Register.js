@@ -1,20 +1,34 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import './Register.css'
+import auth from '../../../firebase.init'
 
 const Register = () => {
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
     const navigate = useNavigate();
 
     const navigateLogin = () => {
         navigate('/login')
     }
 
+    if (user) {
+        navigate('/home')
+    }
+
     const handleRegister = event => {
-        event.perventDefault();
-        const name = event.terget.name.value;
-        const email = event.terget.email.value;
-        const password = event.terget.password.value;
+        event.preventDefault();
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+
+        createUserWithEmailAndPassword(email, password);
     }
 
     return (
@@ -25,11 +39,11 @@ const Register = () => {
                         <h2>Please Register</h2>
                     </div>
                     <div className='login-form'>
-                        <input className='input-' type="text" placeholder='Your Name' required />
+                        <input className='input-' type="text" name='name' placeholder='Your Name' required />
                         <br />
-                        <input className='input-' type="email" placeholder='Email Address' required />
+                        <input className='input-' type="email" name='email' placeholder='Email Address' required />
                         <br />
-                        <input className='input-' type="password" placeholder='Password' required />
+                        <input className='input-' type="password" name='password' placeholder='Password' required />
                         <br />
                         <button className='log-btn' type="submit">Register</button>
                     </div>
