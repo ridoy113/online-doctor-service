@@ -1,0 +1,54 @@
+.login-form {
+    text-align: center;
+}
+
+.login-text {
+    text-align: center;
+    color: #5F719F;
+}
+
+.input- {
+    height: 50px;
+    width: 450px;
+    margin-top: 15px;
+    padding: 8px;
+    font-size: larger;
+    border: none;
+    border-radius: 5px;
+    background-color: #ebe2e8;
+    color: #47383f;
+}
+
+.log-btn {
+    height: 45px;
+    width: 210px;
+    background-color: #ff3131;
+    color: white;
+    font-size: medium;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.log-btn:hover {
+    background-color: white;
+    border: 2px solid #ff6262;
+    color: #5F719F;
+    font-size: medium;
+    font-weight: 700;
+}
+
+.full-login {
+    margin-top: 70px;
+    margin-bottom: 90px;
+    margin-left: 380px;
+    margin-right: 380px;
+    padding: 50px;
+    box-shadow: 10px 10px 8px #ff9595;
+}
+
+.new {
+    text-align: center;
+    margin: 8px;
+}
