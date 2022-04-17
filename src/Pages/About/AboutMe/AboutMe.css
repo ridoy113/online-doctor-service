@@ -1,0 +1,26 @@
+.about-me {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    margin-left: 400px;
+    margin-right: 400px;
+    padding: 30px;
+    background-color: #ffdddd;
+    border-radius: 10px;
+    color: #737658;
+    box-shadow: 2px 2px 2px rgb(240, 125, 125), 0 0 25px #191a17, 0 0 5px rgb(2, 2, 59);
+}
+
+.about-me img {
+    height: 300px;
+    box-shadow: 8px 8px 5px gray;
+    border-radius: 3px;
+}
+
+.about-me:hover {
+    background-color: #e5e7ff;
+}
+
+.name-text {
+    margin-top: 15px;
+}
