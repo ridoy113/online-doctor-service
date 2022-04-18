@@ -1,0 +1,17 @@
+.google_btn {
+    margin-left: 120px;
+    height: 50px;
+    width: 250px;
+    border: none;
+    color: white;
+    background: #054f41;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: 400;
+}
+
+.google_btn:hover {
+    background-color: white;
+    color: #f06706;
+    border: 2px solid #054f41;
+}

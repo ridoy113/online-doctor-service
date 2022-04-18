@@ -7,7 +7,7 @@ const AboutMe = () => {
         <div className='about-me'>
             <img src={mypic} alt="" />
             <h2 className='name-text'>Al Mamun Ridoy</h2>
-            <p>I become an expert in a Technology, Javascript, React at last get to a specific job title.</p>
+            <p className='text'>I become an expert in a Technology, Javascript, React at last get to a specific job title.</p>
         </div>
     );
 };

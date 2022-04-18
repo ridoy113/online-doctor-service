@@ -24,3 +24,9 @@
 .name-text {
     margin-top: 15px;
 }
+
+.text {
+    font-size: large;
+    font-weight: 600;
+    font-style: oblique;
+}

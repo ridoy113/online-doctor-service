@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
 import { Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
 
 const Login = () => {
@@ -11,6 +12,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || "/"
+    let errorElement;
 
     const [
         signInWithEmailAndPassword,
@@ -19,9 +21,15 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
     if (user) {
         navigate(from, { replace: true });
     }
+    if (error) {
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+    }
+
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -33,6 +41,12 @@ const Login = () => {
 
     const navigateRegister = event => {
         navigate('/register')
+    }
+
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        await sendPasswordResetEmail(email);
+        alert('Sent email');
     }
 
 
@@ -48,11 +62,15 @@ const Login = () => {
                         <br />
                         <input ref={passwordRef} className='input-' type="password" name="password" id="" placeholder='Enter your currect password' required />
                         <br />
-                        <button className='log-btn' type="submit">Submit</button>
+                        <button className='log-btn' type="submit">Log In</button>
                     </div>
                 </div>
             </Form>
-            <p className='new'>New To This Site? <Link to="/register" className='text-danger pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
+            {errorElement}
+            <p className='new mt-4'>New To This Site? <Link to="/register" className='text-danger pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
+
+            <p className='new'>Forget Password? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</Link></p>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };
